@@ -15,34 +15,37 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
 
-    socket.on('chat message', (msg) => {
+    socket.on('post-link', (link) => {
 
-        console.log('message: ' + msg);
+        
+        const code = link.match(/(?:.+?)?(?:\/v\/|watch\/|\?v=|\&v=|youtu\.be\/|\/v=|^youtu\.be\/|watch\%3Fv\%3D)([a-zA-Z0-9_-]{11})+/);
 
-        const child = spawn('youtube-dl', ['-o', './public/mp3/%(title)s.%(ext)s', '-x', '--audio-format', "mp3", msg]);
+        const child = spawn('youtube-dl', ['-o', './public/mp3/%(title)s.%(ext)s', '-x', '--audio-format', "mp3", code]);
         let infosx = ''
         let mediaUrl = ''
 
         child.stdout.on('data', data => {
+            console.log(data.toString());
 
             infosx = `${data}`.match(/[0-9].[0-9]%|[0-9][0-9].[0-9]%|[0-9][0-9][0-9]%/);
             mediaUrl = `${data}`.match(/[A-z].*.mp3/);
             media = `${mediaUrl}`.split('c/')
 
-            console.log(`${data}`);
+            //console.log(`${data}`);
 
-            const msg = {
+            const info = {
                 info: `${infosx}`,
                 media: `${media[1]}`
             }
 
-            console.log(socket.id + ' - ' + infosx );
-            io.to(socket.id).emit('chat message', msg);
+            //console.log(socket.id + ' - ' + infosx );
+            io.to(socket.id).emit('info', info);
 
         });
 
         child.stderr.on('data', data => {
             console.error(`stderr: ${data}`);
+           io.to(socket.id).emit('info-error', 'Is not a valid URL');
         });
 
     });

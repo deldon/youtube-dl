@@ -2,9 +2,14 @@
 
 
 ## Interface graphique pour youtube-dl
-Télécharger vos musiques favorites et voir la progression en direct grâce a socket.io .
+Télécharger vos musiques favorites sur youtube.  
 
-<img src="./img.png">
+L'application va garce au child_process (https://nodejs.org/api/child_process.html) faire tourner en font tache le logiciel youtude-dl (https://youtube-dl.org/) a la demande du client.
+
+<img src="./doc/youtubedl-1.png">  
+
+Le serveur revoie la progression en "real time" au client grace au module socket.io 
+<img src="./doc/youtubedl-2.png">  
 
 ## Installation:
 
@@ -35,3 +40,5 @@ npm i
 ```
 npm start
 ```
+
+<img src="./doc/youtubedl-3.png">  
