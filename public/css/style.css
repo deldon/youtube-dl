@@ -48,8 +48,9 @@ img {
 #info {
     display: flex;
     justify-content: end;
+    align-items: center;
     width: 0%;
-    
+    height: 50px;
     background-color: #9c0d38;
     border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -91,7 +92,7 @@ button {
     cursor: pointer;
     width: 10%;
     border: none;
-    background-color: #086974;
+    background-color: #9c0d38;
     border-radius: 5px;
     font-weight: 900;
     color: #9c0d38;
@@ -118,10 +119,10 @@ a {
     margin: 1rem auto;
     padding: 0.5rem;
     font-family: 'Courier New', Courier, monospace;
-    background-color: #086974;
+    background-color: #2ec4b6;
     font-weight: 900;
     border-radius: 3px;
-    width: 150px;
+    width: 200px;
     color: #f7f5fb;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;

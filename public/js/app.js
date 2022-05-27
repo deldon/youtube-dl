@@ -20,10 +20,6 @@ form.addEventListener('submit', function (e) {
         infoPour.id ='info_pour'
         info.appendChild(infoPour)
 
-
-
-
-        
         form.innerHTML = '';
         
         socket.emit('post-link', input.value);
@@ -79,7 +75,7 @@ const restart = ()=>{
     const card = document.getElementById('card');
     const reload = document.createElement('p');
     reload.id = 'reload'
-    reload.innerText = 'reload'
+    reload.innerText = 'Télécharger une nouvelle musique'
     reload.addEventListener('click',()=>{
         location.reload();
     })

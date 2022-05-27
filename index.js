@@ -31,21 +31,19 @@ io.on('connection', (socket) => {
             mediaUrl = `${data}`.match(/[A-z].*.mp3/);
             media = `${mediaUrl}`.split('c/')
 
-            //console.log(`${data}`);
-
             const info = {
                 info: `${infosx}`,
                 media: `${media[1]}`
             }
 
-            //console.log(socket.id + ' - ' + infosx );
+            console.log(socket.id + ' - ' + infosx );
             io.to(socket.id).emit('info', info);
 
         });
 
         child.stderr.on('data', data => {
             console.error(`stderr: ${data}`);
-           io.to(socket.id).emit('info-error', 'Is not a valid URL');
+           io.to(socket.id).emit('info-error', `Le lien youtube n'est pas valide`);
         });
 
     });
