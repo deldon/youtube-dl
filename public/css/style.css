@@ -1,67 +1,71 @@
-
-body{
+body {
     background-color: #edae49;
     width: 100%;
     height: 100vh;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#wrapper{
-   padding: 3rem;
-   width: 50%;
+#wrapper {
+    padding: 3rem;
+    width: 50%;
 }
 
-#head{
+#head {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-img{
+
+img {
     margin: 0.5rem;
 }
 
-#card{
+#card {
     background-color: #d1495b;
-    
+
     border-radius: 20px;
     padding: 3rem;
 
 }
-#info{
+
+#info {
     width: 500px;
     height: 20px;
     background-color: #edae49;
     border-radius: 5px;
 }
-form{
+
+form {
     display: flex;
     justify-content: space-around;
 }
-#input{
+
+#input {
     font-size: 1.2rem;
     width: 85%;
     border-radius: 20px;
     border: none;
 }
-button{
+
+button {
     width: 10%;
     border: none;
-    background-color:#80ced7 ;
+    background-color: #086974;
     border-radius: 5px;
     font-weight: 900;
-    color: #d1495b;
+    color: #dfdfdf;
 }
 
-#url{
+#url {
     display: flex;
     justify-content: center;
 }
 
-a{
-    color: #80ced7;
+a {
+    color: #ffffff;
     font-weight: 900;
     text-decoration: none;
 }
