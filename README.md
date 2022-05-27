@@ -2,7 +2,7 @@
 
 
 ## Interface graphique pour youtube-dl
-**Téléchargez vos musiques favorites sur youtube.**  
+**Téléchargez vos musiques favorites sur youtube !**  
 
 L'application,  par le biais du child_process https://nodejs.org/api/child_process.html  </br> va faire tourner en fond de tâche le logiciel youtude-dl https://youtube-dl.org/  
 à la demande du client.
@@ -31,8 +31,7 @@ Source : http://ytdl-org.github.io/youtube-dl/download.html
 sudo apt install ffmpeg 
 ```
 
-### Installer Npm
-Installer express et socket.io
+### Installer express et socket.io grâce à NPM
 
 ```
 npm i 
