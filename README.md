@@ -2,10 +2,9 @@
 
 
 ## Interface graphique pour youtube-dl
-Télécharger vos musiques favorites sur youtube.  
+**Téléchargez vos musiques favorites sur youtube.**  
 
-L'application,  par le biais du child_process https://nodejs.org/api/child_process.html 
-va faire tourner en fond de tâche le logiciel youtude-dl https://youtube-dl.org/  
+L'application,  par le biais du child_process https://nodejs.org/api/child_process.html  </br> va faire tourner en fond de tâche le logiciel youtude-dl https://youtube-dl.org/  
 à la demande du client.
 
 <img src="./doc/youtubedl-1.png">  
