@@ -21,15 +21,16 @@ io.on('connection', (socket) => {
         const code = link.match(/(?:.+?)?(?:\/v\/|watch\/|\?v=|\&v=|youtu\.be\/|\/v=|^youtu\.be\/|watch\%3Fv\%3D)([a-zA-Z0-9_-]{11})+/);
 
         const child = spawn('youtube-dl', ['-o', './public/mp3/%(title)s.%(ext)s', '-x', '--audio-format', "mp3", code]);
-        let infosx = ''
-        let mediaUrl = ''
+       
+        let infosx = '';
+        let mediaUrl = '';
 
         child.stdout.on('data', data => {
             console.log(data.toString());
 
             infosx = `${data}`.match(/[0-9].[0-9]%|[0-9][0-9].[0-9]%|[0-9][0-9][0-9]%/);
             mediaUrl = `${data}`.match(/[A-z].*.mp3/);
-            media = `${mediaUrl}`.split('c/')
+            media = `${mediaUrl}`.split('c/');
 
             const info = {
                 info: `${infosx}`,
@@ -50,7 +51,7 @@ io.on('connection', (socket) => {
 });
 
 server.listen(3000, () => {
-    console.log(`Example app listening on port 3000`)
+    console.log(`Listening on port 3000`);
 })
 
 
