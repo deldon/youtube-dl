@@ -12,7 +12,7 @@
 **Téléchargez vos musiques favorites sur youtube !** :notes:
 
 
-L'idée derrière ce projet et de travailler avec les child process et d'expérimenter dans un cas concret avec les webScoket
+L'idée derrière ce projet et de travailler avec les child process et d'expérimenter dans un cas concret avec les webScoket.
 
 L'application,  par le biais du child_process https://nodejs.org/api/child_process.html  </br> va faire tourner en fond de tâche le logiciel youtube-dl https://youtube-dl.org/  
 à la demande du client.
@@ -26,7 +26,7 @@ Grâce au module socket.io, le serveur renvoie la progression du téléchargemen
 
 
 ### Node
-  1. Télécharger la version LTS de NodeJS [ici](https://nodejs.org/fr/download/)
+  1. Télécharger la version LTS de NodeJS [ici](https://nodejs.org/fr/download/).
   2. Suivre les étapes d'installation en laissant les options par défaut.
 
 Version de Node v18.1.0
@@ -49,8 +49,8 @@ sudo apt-get install ffmpeg
 
 ## Exécution
 
-1. Ouvrir une invite de commande à la racine du projet
-2. S'assurer d'avoir les dépendance npm installées 
+1. Ouvrir une invite de commande à la racine du projet.
+2. S'assurer d'avoir les dépendances npm installées. 
 ```
 npm install
 ```
@@ -60,4 +60,4 @@ npm run start
 ```
  
 Puis :
-4. Ouvrir un navigateur à l'adresse [http://localhost:3000/](http://localhost:3000/)
+4. Ouvrir un navigateur à l'adresse [http://localhost:3000/](http://localhost:3000/).
